@@ -1,3 +1,4 @@
+<h1>Open the Developer Console</h1>
 <script>
 const convertToHex = byteArray => {
     return byteArray.map(byte => ('0' + (byte & 0xFF).toString(16)).slice(-2)).join('');
@@ -71,7 +72,6 @@ const runVM = async (program, data) => {
 const program = [
     ['+', 0, 1], // Increment value at address 0 by value at address 1
     ['<', 0, 2, 0], // If value at address 0 is less than value at address 2, jump to the address specified in address 0 (which is '+')
-    // ['jmp', 3] // Jump to address specified in address 3
 ];
 const data = [0, 1, 10, 0, 0];
 
