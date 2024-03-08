@@ -9,7 +9,7 @@ BitVM is a computing paradigm to express Turing-complete Bitcoin contracts. This
 ## Ressources
 - [BitVM whitepaper](bitvm.pdf)
 - [BitVM Telegram group](https://t.me/bitVM_chat)
-- [BitVM docs](https://github.com/BitVM/BitVM/docs)
+- [BitVM docs](https://github.com/BitVM/BitVM/tree/main/docs)
 - [BitVM organization on Github](https://github.com/BitVM)
 
 ### Presentations & Podcasts
