@@ -5,9 +5,10 @@ Tree++ is a language for smarter Bitcoin contracts.
 At the core of Tree++ there is a templating language which can express complex Bitcoin Scripts.
 
 - Evaluate constant expressions
+- Parametrized templates
 - Unroll loops
 - Compose opcodes
-- Library of opcodes
+- Library of composed opcodes
   - E.g., multiplication, bitwise XOR, bitwise shifts, blake3,...
 - Statefulness
   - Lamport signatures (message sizes: u8, u32, u160, ...)
