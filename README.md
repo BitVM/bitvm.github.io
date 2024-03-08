@@ -23,4 +23,4 @@ BitVM is a computing paradigm to express Turing-complete Bitcoin contracts. This
 ## Team
 The project is lead by the inventor of BitVM, Robin Linus, together with Lukas George and Stillsaiko. Special thanks to Super Testnet and Carsten Munk for their code contributions. Furthermore, we're collaborating in BitVM research projects together with Alexei Zamyatin(https://alexei.tech), as well as Matteo Maffai's group at TU Vienna, and David Tse's group at Stanford.
 
-BitVM is developed as free and open source software under the umbrella of the [ZeroSync](https://zerosync.org) nonprofit organization. It is funded by research grants from Spiral, OpensSats, and community contributions.
+BitVM is developed as free and open source software under the umbrella of the [ZeroSync](https://zerosync.org) nonprofit organization. It is funded by research grants from Spiral, OpenSats, and community contributions.
