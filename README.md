@@ -17,6 +17,8 @@ BitVM is a computing paradigm to express Turing-complete Bitcoin contracts. This
 - [What is BitVM? with Robin Linus and Super Testnet (Stephan Livera Podcast)](https://www.youtube.com/watch?v=XxqQU6j6jI8)
 - [Robin Linus at Brink Foundation](https://brink.dev/blog/2024/01/16/eng-call-bitvm) ([slides](https://docs.google.com/presentation/d/12gHxC1bR6Nb7A5IzkRvIdw44l1zP1Tn1ea_DnTbA61Q/edit?usp=sharing))
 - [Super Testnet's workshop "BitVM: Bitcoin Smart Contracts With Rich State"](https://www.youtube.com/watch?v=LwH9fhY4uGA)
+- [Deep dive into the draft implementation](https://www.youtube.com/watch?v=7sRqzoZorn0)
+
 
 ## Team
 The project is lead by Robin Linus, the inventor of BitVM, together with the [ZeroSync](https://zerosync.org) team, Lukas George and stillsaiko.
