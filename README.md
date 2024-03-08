@@ -11,6 +11,7 @@ BitVM is a computing paradigm to express Turing-complete Bitcoin contracts. This
 - [BitVM Telegram group](https://t.me/bitVM_chat)
 - [BitVM docs](https://github.com/BitVM/BitVM/tree/main/docs)
 - [BitVM organization on Github](https://github.com/BitVM)
+- [Awesome BitVM](https://github.com/Rsync25/awesome-bitvm)
 
 ### Presentations & Podcasts
 - [Robin Linus and Lukas George at Bitcoin Amsterdam](https://www.youtube.com/watch?v=rubs5SrkGsM)
