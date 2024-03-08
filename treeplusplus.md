@@ -10,7 +10,7 @@ At the core of Tree++ there is a templating language which can express complex B
 - Library of opcodes
   - E.g., multiplication, bitwise XOR, bitwise shifts, blake3,...
 - Statefulness
-  - Message sizes: u8, u32, u160, ...
+  - Lamport signatures (message sizes: u8, u32, u160, ...)
   - Also Winternitz signatures
   - In the future maybe OP_CHECKSIGFROMSTACK
 
