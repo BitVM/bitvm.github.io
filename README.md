@@ -16,6 +16,7 @@ BitVM is the foundational element to bridge bitcoin to second layers such as sid
 - [BitVM Telegram group](https://t.me/bitVM_chat)
 - [BitVM docs](https://github.com/BitVM/BitVM/tree/main/docs)
 - [BitVM organization on Github](https://github.com/BitVM)
+- [Tree++ overview](treeplusplus.md)
 - [Awesome BitVM](https://github.com/Rsync25/awesome-bitvm)
 
 ### Presentations & Podcasts
