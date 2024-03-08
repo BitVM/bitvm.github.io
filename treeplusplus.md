@@ -9,7 +9,9 @@ At the core of Tree++ there is a templating language which can express complex B
 - Unroll loops
 - Compose opcodes
 - Library of composed opcodes
-  - E.g., multiplication, bitwise XOR, bitwise shifts, blake3,...
+  - E.g., multiplication, bitwise XOR, bitwise shifts, Blake3, ...
+- Hints
+  - E.g. reduce: division to a multiplication, square root to a multiplication, modulo to a multiplication., ...
 - Statefulness
   - Lamport signatures (message sizes: u8, u32, u160, ...)
   - Also Winternitz signatures
