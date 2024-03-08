@@ -19,5 +19,5 @@ At the core of Tree++ there is a templating language which can express complex B
 - Compose Tree++ scripts into potentially large Taptrees
 - Model contract logic in form of graphs of transactions
 - Statefulness
-  - presigning
+  - presigned transactions
   - connector outputs
