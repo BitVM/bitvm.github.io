@@ -19,10 +19,12 @@ At the core of Tree++ there is a templating language which can express complex B
 
 ## Graphs of Transactions
 - Compose Tree++ scripts into potentially large Taptrees
-- Model contract logic in form of graphs of transactions
+- Model contract logic in form of sequences and graphs of transactions
 - Statefulness
   - Presigned transactions
   - Connector outputs
+  - Trigger transactions
+  - Timeouts
 - Library of parametrizable sub-graphs
   - E.g. BitVM, zkp verifier, bridge
 
