@@ -28,7 +28,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 - [Robin Linus at BitDevs meetup at Stanford (slides only)](https://docs.google.com/presentation/d/12gHxC1bR6Nb7A5IzkRvIdw44l1zP1Tn1ea_DnTbA61Q/edit?usp=sharing)
 
 ## Contributors
-The BitVM project is lead by its inventor, [Robin Linus](https://profiles.stanford.edu/robinlinus), together with Lukas George and Stillsaiko. Special thanks to Super Testnet, Carsten Munk, and Steven Roose for their code contributions. We're also collaborating in research projects together with Liam Eagen, Alexei Zamyatin, as well as Matteo Maffai's group at TU Vienna, and David Tse's group at Stanford.
+The BitVM project is lead by its inventor, [Robin Linus](https://profiles.stanford.edu/robinlinus), together with Lukas George and Stillsaiko. Special thanks to Super Testnet, Carsten Munk, Weikeng Chen, and Steven Roose for their code contributions. We're also collaborating in research projects together with Liam Eagen, Alexei Zamyatin, as well as Matteo Maffai's group at TU Vienna, and David Tse's group at Stanford.
 
 BitVM is developed as free and open source software under the umbrella of the [ZeroSync](https://zerosync.org) nonprofit organization. It is funded by research grants from Spiral, Starkware, OpenSats, and community contributions.
 
