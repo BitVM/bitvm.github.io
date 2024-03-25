@@ -62,8 +62,9 @@ The following protocol improves the happy path (which is hopefully the most comm
 
 (Zoom in: Right click -> open in new tab)
 
+
 ### Limitation: Fees
-In the design above, a prover can steal some fees.
+In the design above, a prover can steal some fees. In this scenario, the deposit is still safe, but the verifier lost their collateral.
 
 The attack scenario is as follows:
 - the prover is malicious
@@ -71,7 +72,10 @@ The attack scenario is as follows:
 - prover waits for a challenger to execute the Challenge_TX paying the prover to execute the challenge
 - prover doesn't execute the challenge but simply stops responding
 
-In this scenario, the deposit is still safe, but the verifier lost their collateral.
+The following modification of the graph fixes the fee issue. It requires two more n-of-n presigned transactions.
+
+![](permissionless_bridge_v2.png)
+
 
 ### Limitation: Honest Operator
 The design requires at least one honest operator, otherwise the funds get burned. In practice liveness failures can be used to steal funds with a ransom attack. (E.g. I will only unfreeze your funds if you pay me a 50% ransom.)
