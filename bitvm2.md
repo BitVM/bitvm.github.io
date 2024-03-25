@@ -37,7 +37,7 @@ Any verifier can disprove any faulty assertion. During setup we define a single 
 f_i( z_(i-1) ) == z_i
 ``` 
 
-doesn't hold. This reduces the total worst-case computation to a single step `f_i`, executed by the verifier. That step might still require a sizeable Script implementation. Theoretically, that's fine as long as it fits into a single block, or even better, the standardness size of 256 kb (TODO: double check). In practice, for some specific implementation of `f`, we would try to find an optimal balance between the prover's commitment size and the verifier's Script size.
+doesn't hold. This reduces the total worst-case computation to a single step `f_i`, executed by the verifier. That step might still require a sizeable Script implementation. Theoretically, that's fine as long as it fits into a single block, or even better, the standardness size of 400kb. In practice, for some specific implementation of `f`, we would try to find an optimal balance between the prover's commitment size and the verifier's Script size.
 
 Effectively, this allows anyone to destroy the prover's output if they make any incorrect assertion. Otherwise, if nobody disproves any part of the computation, then the script times out and lets the honest prover spend the output. 
 That's at most two rounds in total.
