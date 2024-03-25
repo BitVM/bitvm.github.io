@@ -61,3 +61,14 @@ The following protocol improves the happy path (which is hopefully the most comm
 ![](permissionless_bridge.png)
 
 (Zoom in: Right click -> open in new tab)
+
+### Limitation 
+In the design above, a prover can steal some fees.
+
+The attack scenario is as follows:
+- the prover is malicious
+- prover executes their KickOff_Tx without a valid PegOut_Tx
+- prover waits for a challenger to execute the Challenge_TX paying the prover to execute the challenge
+- prover doesn't execute the challenge but simply stops responding
+
+In this scenario, the deposit is still safe, but the verifier lost their collateral.
