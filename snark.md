@@ -2,7 +2,7 @@
 
 We want to implement a universal SNARK verifier in Bitcoin Script to run it in [BitVM2](/bivm2).
 
-## Options
+## Possible Proof Systems
 - Groth16
 - FFlonk
 - FFlonk + slonk
