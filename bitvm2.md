@@ -4,7 +4,7 @@ The original BitVM design was limited to the two-party setting. Further works co
 
 BitVM 2 is a novel variant in which anyone can act as verifier. This still requires a one-time setup with a 1-of-n honesty assumption, but during runtime anyone can challenge an invalid assertion without having to be part of the initial group of n. This overcomes limitations of previous schemes and improves on their trust assumptions. Furthermore, it simplifies the overall design and reduces the maximum length of the trial down to two rounds.
 
-Bridges still additionally require some predefined set of `m` operators and at least one of them has to act honest. However, even in case of all operators being dishonest, they cannot steal any deposit but only burn them at worst.
+Bridges still additionally require some predefined set of `m` operators and at least one of them has to act honest. However, even in case of all operators being dishonest, they cannot steal any deposit but only burn them at worst. 
 
 ## Introduction
 For a given program `f` we want to verify that for some input `x` and output `y` the assertion `f(x) = y` holds. For example, `f` could be a [SNARK verifier](https://bitvm.org/snark), e.g., for the Groth16 proof system. Then `x` would be a proof and `y` is some output state for which the SNARK proves validity.
@@ -62,7 +62,7 @@ The following protocol improves the happy path (which is hopefully the most comm
 
 (Zoom in: Right click -> open in new tab)
 
-### Limitation 
+### Limitation: Fees
 In the design above, a prover can steal some fees.
 
 The attack scenario is as follows:
@@ -72,3 +72,6 @@ The attack scenario is as follows:
 - prover doesn't execute the challenge but simply stops responding
 
 In this scenario, the deposit is still safe, but the verifier lost their collateral.
+
+### Limitation: Honest Operator
+The design requires at least one honest operator, otherwise the funds get burned. In practice liveness failures can be used to steal funds with a ransom attack. (E.g. I will only unfreeze your funds if you pay me a 50% ransom.)
