@@ -56,5 +56,8 @@ The following protocol improves the happy path (which is hopefully the most comm
 4. If incorrect, anyone can disprove assertion `f_i`
 
 
+## Permissionless Bridge Design
 
+![](permissionless_bridge.png)
 
+(Zoom in: Right click -> open in new tab)
