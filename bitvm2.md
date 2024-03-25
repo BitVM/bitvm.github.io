@@ -7,7 +7,7 @@ BitVM 2 is a novel variant in which anyone can act as verifier. This still requi
 Bridges still additionally require some predefined set of `m` operators and at least one of them has to act honest. However, even in case of all operators being dishonest, they cannot steal any deposit but only burn them at worst.
 
 ## Introduction
-For a given program `f` we want to verify that for some input `x` and output `y` the assertion `f(x) = y` holds. For example, `f` could be a SNARK verifier, e.g., for the Groth16 proof system. Then `x` would be a proof and `y` is some output state for which the SNARK proves validity.
+For a given program `f` we want to verify that for some input `x` and output `y` the assertion `f(x) = y` holds. For example, `f` could be a [SNARK verifier](https://bitvm.org/snark), e.g., for the Groth16 proof system. Then `x` would be a proof and `y` is some output state for which the SNARK proves validity.
 
 In case of a SNARK verifier the program is too large to represent it in a single Bitcoin Script. Implementing a Groth16 verifier would maybe result in a 20mb Script. However, the maximum script size is Bitcoin's block size of 4mb. And even that size would likely be impractically large.
 
