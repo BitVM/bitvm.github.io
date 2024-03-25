@@ -1,5 +1,7 @@
 # SNARK Verifier in Bitcoin Script
 
+We want to implement a universal SNARK verifier for [BitVM2](/bivm2) 
+
 ## Options
 - Groth16
 - FFlonk
@@ -11,5 +13,5 @@ All three can operate over the bn254 curve.
 - bn254 field arithmetic (addition, multiplication, inversion)
 - bn254 curve operations (point addition, scalar multiplication)
 - bn254 pairings
-  - constants vs variable
+  - constants vs variable inputs
 - Lamport signatures / Winternitz signatures
