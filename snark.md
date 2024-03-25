@@ -10,7 +10,8 @@ We want to implement a universal SNARK verifier in Bitcoin Script to run it in [
 All three can operate over the bn254 curve.
 
 ## Code Modules 
-
+- u256 arithmetic
+  - addition, multiplication
 - Lamport signatures / Winternitz signatures
 - bn254 field arithmetic
   - addition, multiplication, inversion
