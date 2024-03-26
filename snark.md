@@ -31,7 +31,6 @@ Example implementations
 - The commitment script can make use of conditionals. E.g., "if z3 == 1 then commit to z11 else commit to z17"
 - We can use hints / auxiliary inputs to the f_i / E.g., provide an inverse and then verify it using multiplication
 - We can pre-parse script inputs into the right format. E.g., provide a value as bits on the stack instead of 30-bit limbs
-- We can half the size of the trace: The prover commits in his first round not just to the end result but also to the intermediate result in the middle of the computation.
 - Wrap a STARK into a SNARK. One-time setup enabling fast and compact universal computation. E.g., RISC0:
   - [Bonsai](https://api.bonsai.xyz/swagger-ui/#/snark/route_snark_create)
   - [Local](https://github.com/risc0/risc0/tree/main/compact_proof)
