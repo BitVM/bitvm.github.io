@@ -78,4 +78,4 @@ The following modification of the graph fixes the fee issue. It requires two mor
 
 
 ### Limitation: Honest Operator
-The design requires at least one honest operator, otherwise the funds get burned. In practice liveness failures can be used to steal funds with a ransom attack. (E.g. I will only unfreeze your funds if you pay me a 50% ransom.)
+The design requires at least one honest operator, otherwise the funds become unspendable eventually. In practice liveness failures can be used to steal funds with a ransom attack. (E.g. I will only unfreeze your funds if you pay me a 50% ransom.)
