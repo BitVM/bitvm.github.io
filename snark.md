@@ -4,10 +4,14 @@ A plan to implement a universal SNARK verifier in Bitcoin Script to run it in [B
 
 ## Possible Proof Systems
 - Groth16
-- FFlonk
+- [FFlonk](https://eprint.iacr.org/2021/1167)
 - FFlonk + slonk
 
 All three can operate over the bn254 curve.
+
+Example implementations
+- [snarkjs](https://github.com/iden3/snarkjs)
+
 
 ## Code Modules 
 - Lamport signatures / Winternitz signatures
@@ -22,7 +26,7 @@ All three can operate over the bn254 curve.
 - bn254 pairings
   - constant vs variable inputs
 
-## General Ideas
+## General Ideas for Optimizations
 - The chunks f1, f2, f3, ... don't have to be in sequence. Their inputs and outputs can form any kind of DAG. So we don't need to send global information along each step.
 - The commitment script can make use of conditionals. E.g., "if z3 == 1 then commit to z11 else commit to z17"
 - We can use hints / auxiliary inputs to the f_i / E.g., provide an inverse and then verify it using multiplication
