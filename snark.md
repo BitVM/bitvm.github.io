@@ -1,6 +1,6 @@
 # SNARK Verifier in Bitcoin Script
 
-A plan to implement a universal SNARK verifier in Bitcoin Script to run it in [BitVM2](/bitvm2).
+A plan to implement a universal SNARK verifier in Bitcoin Script to run it in [BitVM2](/bitvm2.md).
 
 ## Possible Proof Systems
 - Groth16
