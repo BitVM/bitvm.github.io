@@ -36,6 +36,7 @@ Example implementations
 
 
 ## General Ideas for Optimizations
+- The prover can make another large commitment in his kickoffTx.
 - We can use a sequence of commit transactions, effectively spreading out the commitment over multiple blocks.
 - The chunks f1, f2, f3, ... don't have to be in sequence. Their inputs and outputs can form any kind of DAG. So we don't need to send global information along each step.
 - The commitment script can make use of conditionals. E.g., "if z3 == 1 then commit to z11 else commit to z17"
@@ -46,4 +47,3 @@ Example implementations
   - [Local](https://github.com/risc0/risc0/tree/main/compact_proof)
 - The disproveTx can be quite large because only a dishonest prover would have to pay for it
 - We can hash intermediate results, compressing the assertTx, at the expense of having to compute a hash function in the disproveTx
-- The prover can make another large commitment in his kickoffTx
