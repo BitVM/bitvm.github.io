@@ -45,3 +45,4 @@ Example implementations
   - [Local](https://github.com/risc0/risc0/tree/main/compact_proof)
 - The disproveTx can be quite large because only a dishonest prover would have to pay for it
 - We can hash intermediate results, compressing the assertTx, at the expense of having to compute a hash function in the disproveTx
+- The prover can make another large commitment in his kickoffTx
