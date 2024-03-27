@@ -26,6 +26,14 @@ Example implementations
 - bn254 pairings
   - constant vs variable inputs
 
+## Complexity
+- Proof size is about 300 bytes.
+- The maximum block size if 4 MB, so in theory, assertTx and disproveTx can be up to 4 MB.
+- Our current implementation of Winternitz signatures require about 31 bytes of overhead per bit of message. Thus, the assertTx can commit to up to 16 KB of trace data.
+- A degree-12 extension field element is about 3KB. Thus, naively, the assertTx can commit to up to 5 intermediate results.
+- Thus, the maximum size of all disproveTx leaves combined can be up to `5 x 4 MB = 20 MB`.
+
+
 ## General Ideas for Optimizations
 - The chunks f1, f2, f3, ... don't have to be in sequence. Their inputs and outputs can form any kind of DAG. So we don't need to send global information along each step.
 - The commitment script can make use of conditionals. E.g., "if z3 == 1 then commit to z11 else commit to z17"
@@ -34,4 +42,5 @@ Example implementations
 - Wrap a STARK into a SNARK. One-time setup enabling fast and compact universal computation. E.g., RISC0:
   - [Bonsai](https://api.bonsai.xyz/swagger-ui/#/snark/route_snark_create)
   - [Local](https://github.com/risc0/risc0/tree/main/compact_proof)
-- The DisproveTx can be quite large because only a dishonest prover would have to pay for it
+- The disproveTx can be quite large because only a dishonest prover would have to pay for it
+- We can hash intermediate results, compressing the assertTx, at the expense of having to compute a hash function in the disproveTx
