@@ -26,7 +26,7 @@ Example implementations
 - bn254 pairings
   - constant vs variable inputs
 
-## Complexity
+## Complexity Estimation
 - Proof size is about 300 bytes. The public inputs are roughly another 100 bytes.
 - The maximum block size if 4 MB, so in theory, the size of assertTx and disproveTx may be almost up to 4 MB.
 - Our current implementation of Winternitz signatures require about 31 bytes of overhead per bit of message. Thus, the assertTx may commit to up to 16 KB of trace data.
