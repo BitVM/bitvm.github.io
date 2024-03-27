@@ -26,7 +26,7 @@ Example implementations
 - bn254 pairings
   - constant vs variable inputs
 
-## Complexity Estimation
+## Complexity Analysis
 - Proof size is about 300 bytes. The public inputs are roughly another 100 bytes.
 - The maximum block size if 4 MB, so in theory, the size of assertTx and disproveTx may be almost up to 4 MB.
 - Currently, a full block of space costs less than 0.3 BTC ~ $20000 in fees.
