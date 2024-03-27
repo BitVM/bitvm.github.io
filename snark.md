@@ -2,6 +2,11 @@
 
 A plan to implement a universal SNARK verifier in Bitcoin Script to run it in [BitVM2](/bitvm2.md).
 
+## Constraints
+- Max script size: ~ 4 MB < block size
+- Max stack size: altstack + stack < 1000 items 
+- Max stack item size: 520 bytes
+
 ## Possible Proof Systems
 - Groth16
 - [FFlonk](https://eprint.iacr.org/2021/1167)
