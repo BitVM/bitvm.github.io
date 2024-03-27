@@ -16,7 +16,7 @@ Example implementations
 ## Code Modules 
 - Lamport signatures / Winternitz signatures
 - u256 arithmetic
-  - addition, multiplication
+  - addition, multiplication, Karatsuba multiplication
 - bn254 field arithmetic
   - addition, multiplication, inversion
   - Montgomery reduction
