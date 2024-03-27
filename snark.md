@@ -34,3 +34,4 @@ Example implementations
 - Wrap a STARK into a SNARK. One-time setup enabling fast and compact universal computation. E.g., RISC0:
   - [Bonsai](https://api.bonsai.xyz/swagger-ui/#/snark/route_snark_create)
   - [Local](https://github.com/risc0/risc0/tree/main/compact_proof)
+- The DisproveTx can be quite large because only a dishonest prover would have to pay for it
