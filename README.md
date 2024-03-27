@@ -3,7 +3,7 @@
 BitVM enables a free market of second layers, potentially scaling Bitcoin to billions of users.
 
 ## Intro
-BitVM is a computing paradigm to express Turing-complete Bitcoin contracts. This requires no changes to the network’s consensus rules. Rather than executing computations on Bitcoin, they are merely verified, similarly to optimistic rollups. A prover makes a claim that a given function evaluates for some particular inputs to some specific output. If that claim is false, then the verifier can perform a succinct fraud proof and punish the prover. Using this mechanism, any computable function can be verified on Bitcoin.
+BitVM is a computing paradigm to express Turing-complete Bitcoin contracts. This requires no changes to the network’s consensus rules. Rather than executing computations on Bitcoin, they are merely verified, similarly to optimistic rollups. A prover makes a claim that a given function evaluates for some particular inputs to some specific output. If that claim is false, anyone can perform a fraud proof and punish the prover. Using this mechanism, any computable function can be verified on Bitcoin.
 
 BitVM is the foundational element to bridge BTC to second layers such as sidechains, rollups, and [zkCoins](https://gist.github.com/RobinLinus/d036511015caea5a28514259a1bab119).
 
