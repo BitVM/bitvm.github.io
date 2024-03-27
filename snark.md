@@ -22,7 +22,7 @@ Example implementations
   - Montgomery reduction
 - bn254 curve operations
   - point addition, inversion, scalar multiplication
-- bn254 degree-12 extension 
+- bn254 degree-2, degree-6, and degree-12 extensions
 - bn254 pairings
   - constant vs variable inputs
 
