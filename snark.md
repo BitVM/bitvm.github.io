@@ -27,11 +27,11 @@ Example implementations
   - constant vs variable inputs
 
 ## Complexity
-- Proof size is about 300 bytes.
+- Proof size is about 300 bytes. The public inputs are roughly another 100 bytes.
 - The maximum block size if 4 MB, so in theory, the size of assertTx and disproveTx may be almost up to 4 MB.
 - Our current implementation of Winternitz signatures require about 31 bytes of overhead per bit of message. Thus, the assertTx may commit to up to 16 KB of trace data.
 - A degree-12 extension field element is about 3KB. Thus, naively, the assertTx may commit to up to 5 intermediate results.
-- Thus, the maximum size of all disproveTx leaves combined may be up to `5 x 4 MB = 20 MB`.
+- Thus, we my compute up to 6 slices and the maximum size of all disproveTx leaves combined may be up to `6 x 4 MB = 24 MB`.
 
 
 ## General Ideas for Optimizations
