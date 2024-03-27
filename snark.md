@@ -32,7 +32,7 @@ Example implementations
 - Currently, a full block of space costs less than 0.3 BTC ~ $20000 in fees.
 - Our current implementation of Winternitz signatures require about 31 bytes of overhead per bit of message. Thus, the assertTx may commit to up to 16 KB of trace data.
 - A degree-12 extension field element is about 3 KB. Thus, naively, the assertTx may commit to up to 5 intermediate results.
-- Thus, we my compute up to 6 slices and the maximum size of all disproveTx leaves combined may be up to `6 x 4 MB = 24 MB`.
+- Thus, we my compute up to 6 slices, and the total size of all disproveTx Tapscripts combined may be up to `6 x 4 MB = 24 MB`.
 
 
 ## General Ideas for Optimizations
