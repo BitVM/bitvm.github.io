@@ -15,7 +15,7 @@ A plan to implement a universal SNARK verifier in Bitcoin Script to run it in [B
 - Overhead of transferring state between Scripts
   - 31 bytes per bit (using Winternitz signatures)
   - 1 stack item for every 4 bits (each item 20 bytes)
-  - Maximum state size: `1000 items * 4 bit/item = 4000 bits = 500 bytes` (requires 20 kB of signature data)
+  - Maximum input state size per Script: `1000 items * 4 bit/item = 4000 bits = 500 bytes` (requires 20 kB of signature data)
   - A full block can commit to about `4 MB / block * 31 bytes / bit = 16 kB` of data.
 
 
