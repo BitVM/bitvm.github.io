@@ -59,8 +59,7 @@ Example implementations:
 - The commitment script can make use of conditionals. E.g., "if z3 == 1 then commit to z11 else commit to z17"
 - We can use hints / auxiliary inputs to the f_i / E.g., provide an inverse and then verify it using multiplication
 - We can pre-parse script inputs into the right format. E.g., provide a value as bits on the stack instead of 30-bit limbs
-- Wrap a STARK into a SNARK. One-time setup enabling fast and compact universal computation. E.g., RISC0:
-  - [Bonsai](https://api.bonsai.xyz/swagger-ui/#/snark/route_snark_create)
-  - [Local](https://github.com/risc0/risc0/tree/main/compact_proof)
+- Wrap a STARK into a SNARK. One-time setup enabling fast and compact universal computation.
+  - E.g., RISC0: [Bonsai](https://api.bonsai.xyz/swagger-ui/#/snark/route_snark_create) and [Local](https://github.com/risc0/risc0/tree/main/compact_proof)
 - The disproveTx can be quite large because only a dishonest prover would have to pay for it
 - We can hash intermediate results, compressing the assertTx, at the expense of having to compute a hash function in the disproveTx
