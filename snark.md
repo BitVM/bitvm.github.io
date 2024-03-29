@@ -2,19 +2,30 @@
 
 A plan to implement a universal SNARK verifier in Bitcoin Script to run it in [BitVM2](/bitvm2.md).
 
-## Constraints
-- Max script size: ~ 4 MB < block size
+## Bitcoin Script Constraints
+
+### Fundamental Constraints
+- Max script size: 4 MB
 - Max stack size: altstack + stack < 1000 items 
 - Max stack item size: 520 bytes
+- Max input size for arithmetic opcodes: 32-bit words
+
+### Practical Constraints
+- Max script input in form of 32-bit words: `1000 items * 32-bit/item = 32 kB`
+- Overhead of transferring state between Scripts
+  - 31 bytes per bit (using Winternitz signatures)
+  - 1 stack item for every 4 bits (each item 20 bytes)
+  - Maximum state size: `1000 items * 4 bit/item = 4 kB` (requires 20 kB of signature data)
 
 ## Possible Proof Systems
-- Groth16
-- [FFlonk](https://eprint.iacr.org/2021/1167)
+- Groth16 ( 22000 Fq multiplications )
+- [FFlonk](https://eprint.iacr.org/2021/1167) ( 14000 Fq multiplications + hash function )
 - FFlonk + slonk
 
 All three can operate over the bn254 curve.
 
-Example implementations
+Example implementations:
+- [Arkworks](https://github.com/arkworks-rs/groth16)
 - [snarkjs](https://github.com/iden3/snarkjs)
 
 
