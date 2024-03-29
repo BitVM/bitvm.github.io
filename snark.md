@@ -15,7 +15,9 @@ A plan to implement a universal SNARK verifier in Bitcoin Script to run it in [B
 - Overhead of transferring state between Scripts
   - 31 bytes per bit (using Winternitz signatures)
   - 1 stack item for every 4 bits (each item 20 bytes)
-  - Maximum state size: `1000 items * 4 bit/item = 4 kB` (requires 20 kB of signature data)
+  - Maximum state size: `1000 items * 4 bit/item = 4000 bits = 500 bytes` (requires 20 kB of signature data)
+  - A full block can commit to about `4 MB / block * 31 bytes / bit = 16 kB` of data.
+
 
 ## Possible Proof Systems
 - Groth16 ( 22000 Fq multiplications )
@@ -43,10 +45,9 @@ Example implementations:
   - constant vs variable inputs
 
 ## Complexity Analysis
-- Proof size is about 300 bytes. The public inputs are roughly another 100 bytes.
-- The maximum block size if 4 MB, so in theory, the size of assertTx and disproveTx may be almost up to 4 MB.
+- The Groth16 Proof size is about 300 bytes. The public inputs are roughly another 100 bytes.
 - Currently, a full block of space costs less than 0.3 BTC ~ $20000 in fees.
-- Our current implementation of Winternitz signatures require about 31 bytes of overhead per bit of message. Thus, the assertTx may commit to up to 16 KB of trace data.
+- The assertTx may commit to up to 16 KB of trace data.
 - A degree-12 extension field element is about 3 KB. Thus, naively, the assertTx may commit to up to 5 intermediate results.
 - Thus, verifiers may choose from up 6 disproveTx Tapscripts, and the combined size of all Tapscripts is up to `6 x 4 MB = 24 MB`.
 
