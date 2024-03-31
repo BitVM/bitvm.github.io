@@ -12,6 +12,7 @@ At the core of Tree++ there is a templating language which can express complex B
   - E.g., multiplication, bitwise XOR, bitwise shifts, Blake3, ...
 - Hints
   - E.g. reduce: division to a multiplication, square root to a multiplication, modulo to a multiplication., ...
+- Lookup tables
 - Statefulness
   - Lamport signatures (message sizes: u8, u32, u160, ...)
   - Also Winternitz signatures
@@ -21,7 +22,7 @@ At the core of Tree++ there is a templating language which can express complex B
 - Compose Tree++ scripts into potentially large Taptrees
 - Model contract logic in form of sequences and graphs of transactions
 - Statefulness
-  - Presigned transactions
+  - Presigned transactions (also sighashes!)
   - Connector outputs
   - Trigger transactions
   - Timeouts
