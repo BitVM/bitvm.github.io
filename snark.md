@@ -13,7 +13,7 @@ A plan to implement a SNARK verifier in Bitcoin Script to run it in [BitVM2](/bi
 ### Practical Constraints
 - Max script input in form of 32-bit words: `1000 items * 32-bit/item = 32 kB`
 - Overhead of transferring state between Scripts
-  - 31 bytes per bit (using Winternitz signatures)
+  - 26 bytes per bit (using Winternitz signatures)
   - 1 stack item for every 4 bits (each item 20 bytes)
   - Maximum input state size per Script: `1000 items * 4 bit/item = 4000 bits = 500 bytes` (requires 20 kB of signature data)
 
