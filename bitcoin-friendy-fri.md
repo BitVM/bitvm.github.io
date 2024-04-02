@@ -4,7 +4,7 @@
 
 In the latest Challenge Game of Bitvm [https://bitvm.org/bitvm2.html](https://bitvm.org/bitvm2.html), the Prover reveals all states' preimages on the chain. The Verifier, on the other hand, obtains the Prover's staked amount by proving that the states revealed by the Prover would cause the corresponding gates to execute incorrectly.
 
-![截屏2024-03-26 14.19.28.png](./images/%25E6%2588%25AA%25E5%25B1%258F2024-03-26_14.19.28.png)
+![截屏2024-03-26 14.19.28.png](./images/bitvm2.png)
 
 However, the issue here is that the Prover needs to reveal all states on the chain, which can be costly if the computation complexity is high. Even if we pack each leaf script with 300kb, there are still many intermediate states. After all, for verifying Groth16, operations on the elliptic curve and Pairing calculations are quite expensive. For verifying Stark, we need to verify an excessive number of MerklePaths, which would make our verification program large and thus cause too many intermediate states.
 
@@ -124,7 +124,7 @@ If we want to replace MerkleTree with Taptree, it's clear that we can't directly
 
 The following image is an example of changing the MerkleTree Commitment of the $p_0$ polynomial to a Taptree Commitment. In other words, we not only store the evaluation itself and the bit value commitment of the evaluation, but we also need to put the value of the x-coordinate and its corresponding bit value commitment into it.
 
-![Untitled](./images/Untitled.png)
+![Untitled](./images/fri-leaf.png)
 
 The composition of each Leaf Script:
 
@@ -145,7 +145,7 @@ Combine the verification program with the $p_0$ evaluation Taptree Commitment:
 > *In the following diagram, the execution order of each leaf node's Script is from top to bottom, where the blue rectangle represents the input, and the blue dotted line represents that if these two values are not consistent, verifier can take away the staked amount by proving equivocation.*
 > 
 
-![Untitled](./images/Untitled%201.png)
+![Untitled](./images/fri-equal.png)
 
 Currently, the unlock condition is that the provided input can execute the Gate correctly. The Prover also needs to unlock the leaf script to prove it is correct, which will lead to additional costs.
 
@@ -154,7 +154,7 @@ So we will use the method of bitvm2 to change all Leaf Scripts to No Equal, and 
 > *In the following diagram, the execution order of each leaf node's Script is from top to bottom, where the blue rectangle represents the input, and the green dotted line represents that if these two values are not consistent, verifier can take away the staked amount by proving equivocation.*
 > 
 
-![Untitled](./images/Untitled%202.png)
+![Untitled](./images/fri-noequal.png)
 
 Prover will first provide all intermediate states through a transaction called Reveal Intermediate States TX to unlock the Reveal Intermediate State Taptree, and then transfer 3BTC to the Commit FRI Verifier Taptree. At this point, if the verifier finds any problem with the state provided by the prover, it can unlock a specific erroneous leaf node by using the intermediate state as input.
 
