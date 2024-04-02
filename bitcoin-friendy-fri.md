@@ -1,5 +1,7 @@
 # Bitcoin Friendly FRI
 
+[@BitlayerLabs](https://twitter.com/BitlayerLabs)
+
 # 1. Motivation
 
 In the latest Challenge Game of Bitvm [https://bitvm.org/bitvm2.html](https://bitvm.org/bitvm2.html), the Prover reveals all states' preimages on the chain. The Verifier, on the other hand, obtains the Prover's staked amount by proving that the states revealed by the Prover would cause the corresponding gates to execute incorrectly.
@@ -8,11 +10,11 @@ In the latest Challenge Game of Bitvm [https://bitvm.org/bitvm2.html](https://bi
 
 However, the issue here is that the Prover needs to reveal all states on the chain, which can be costly if the computation complexity is high. Even if we pack each leaf script with 300kb, there are still many intermediate states. After all, for verifying Groth16, operations on the elliptic curve and Pairing calculations are quite expensive. For verifying Stark, we need to verify an excessive number of MerklePaths, which would make our verification program large and thus cause too many intermediate states.
 
-Currently, due to the lack of OP_CAT, it is actually impossible to verify the MerkleTree Path.
+Currently, due to the lack of OP_CAT, it is actually impossible to verify the MerkleTree Path on Bitcoin.
 
-So here's an interesting idea:
+In this article, we propose an interesting method to eliminate the verification work of Merkle Path:
 
-During the upgrade process of Bitcoin's Taproot, the concept of Taptree was introduced. Can we replace MerkleTree with Taptree, that is, commit all evaluations corresponding to the committed polynomial in the Leaf Script of Taptree? In this way, we can avoid simulating the verification process of MerklePath on the chain using Bitcoin Script.
+During the upgrade process of Bitcoin's Taproot, the concept of Taptree was introduced. We can replace MerkleTree with Taptree, that is, commit all evaluations corresponding to the committed polynomial in the Leaf Script of Taptree. In this way, we can avoid simulating the verification process of MerklePath on the chain using Bitcoin Script.
 
 Before that, let's review the complete process of Non-interactive FRI:
 
