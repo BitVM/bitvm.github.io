@@ -48,7 +48,7 @@ Example implementations:
 - Currently, a full block of space costs less than 0.3 BTC ~ $20000 in fees.
 - The assertTx may commit to up to 16 KB of trace data.
 - A degree-12 extension field element is about 3 KB. Thus, naively, the assertTx may commit to only about 5 intermediate results. Verifiers could choose only from up 6 disproveTx Tapscripts, and the combined size of all Tapscripts is up to `6 x 4 MB = 24 MB`. Using hash commitments, we can compress the signatures commitments at the expense of more overhead in the disprove scripts.
-  - A full block can commit to about `4 MB / block * 26 bytes / bit = 16 kB` of data.
+  - A full block can commit to about `4 MB / block * 26 bytes / bit = 16 kB / block` of signed data.
   - That's about `( (4mb / 26 byte) bits ) / 20 bytes = 960` 20-byte hashes. Thus, we could chunk the computation into about 960 Scripts of 4 MB each. Considering a communication overhead of about 1-2 MB, we can run computations of up to 2 to 4 GB in total.
 
 
