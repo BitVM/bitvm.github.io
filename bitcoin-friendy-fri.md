@@ -167,3 +167,13 @@ We need to note that each random sampling of each polynomial requires a new Tapt
 ## 3. Future Work
 
 We need to conduct a comprehensive security analysis of Bitcoin Friendly FRI.
+
+
+
+## Reference
+
+https://eprint.iacr.org/2023/474
+
+https://eprint.iacr.org/2021/582
+
+https://bitvm.org/bitvm2.html
