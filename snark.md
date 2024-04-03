@@ -44,7 +44,7 @@ Example implementations:
   - constant vs variable inputs
 
 ## Complexity Analysis
-- The Groth16 Proof size is about 300 bytes. The public inputs are roughly another 100 bytes.
+- The Groth16 proof size is about 300 bytes. The public inputs are roughly another 100 bytes.
 - Currently, a full block of space costs less than 0.3 BTC ~ $20000 in fees.
 - The assertTx may commit to up to 16 KB of trace data.
 - A degree-12 extension field element is about 3 KB. Thus, naively, the assertTx may commit to only about 5 intermediate results. Verifiers could choose only from up 6 disproveTx Tapscripts, and the combined size of all Tapscripts is up to `6 x 4 MB = 24 MB`. Using hash commitments, we can compress the signatures commitments at the expense of more overhead in the disprove scripts.
