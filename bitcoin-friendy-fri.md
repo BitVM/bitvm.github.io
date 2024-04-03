@@ -89,7 +89,7 @@ impl TwoAdicField for BabyBear {
 - The Prover and Verifier generate a query position for the polynomial based on the same Hash Chain
     - Position $r = Hash( v_1 ,P2)$
     - The Prover provides the corresponding values $P_0(r),P_0(-r),P_1(r^2),P_1(-r^2),P2$
-    - The Prover provides the corresponding MerklePath:  $MTP(P_0(r)),MTP(P_0(-r)),MTP(P_1(r^2)),MTP(P_1(-r^2))$
+    - The Prover provides the corresponding MerklePath: $MTP(P_0(r)),MTP(P_0(-r)),MTP(P_1(r^2)),MTP(P_1(-r^2))$
     
     ```jsx
     Proof {
@@ -102,7 +102,7 @@ impl TwoAdicField for BabyBear {
 1. At this time, the Prover gives out an FRI Proof
     - Position $r = Hash( v_1 ,P2)$
     - Prover provides the corresponding value $P_0(r),P_0(-r),P_1(r^2),P_1(-r^2),P2$
-    - Prover provides the corresponding MerklePath:$MTP(P_0(r)),MTP(P_0(-r)),MTP(P_1(r^2)),MTP(P_1(-r^2))$
+    - Prover provides the corresponding MerklePath: $MTP(P_0(r)),MTP(P_0(-r)),MTP(P_1(r^2)),MTP(P_1(-r^2))$
 2. Verifier verification Proof
     1. Verify according to $p_0(r)$ and $p_0(-r)$ calculate $p_1(r^2)$
        
@@ -116,7 +116,7 @@ impl TwoAdicField for BabyBear {
         1. $p_1(r^2) == p_1(r^2)$
     3. Continue to calculate the value of $p_2$ based on $p_1(r^2)$ and $p_1(-r^2)$, and compare it with the value of $p_2$ provided by Prover.
        
-        $*p_1(r^2 ) = g_{0,1}(r^2 ) + v_0 · g_{0,2}(r^2 ).*$
+        $$p_1(r^2 ) = g_{0,1}(r^2 ) + v_0 · g_{0,2}(r^2 )$$
         
     4. At the same time, when the Verifier verifies the correctness of the folding relationship between values, it also verifies the MerklePath of the corresponding values.
 
