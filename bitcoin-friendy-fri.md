@@ -65,7 +65,7 @@ impl TwoAdicField for BabyBear {
 }
 ```
 
-1. For $P_0(X) = P(X)$ with the order of 3, its Evaluation From has four points. We can choose the following code as FRI to generate a 4th-root-of-unity. Then we use four Merkle Tree leaf nodes to commit $P_0(0xbb4c4e4), P_0(0xbb4c4e4^2), P_0(0xbb4c4e4^3), P_0(0xbb4c4e4^4)$. At the same time, the Prover can calculate the Root of this Merkletree as $MTR(P_0)$.
+1. For $P_0(X) = P(X)$ with the degree of 3, its Evaluation Formt has four points. (We will not consider Low degree extension here for the time being, because it will not affect the understanding of the entire protocol). We can choose the following code as FRI to generate a 4th-root-of-unity. Then we use four Merkle Tree leaf nodes to commit $P_0(0xbb4c4e4), P_0(0xbb4c4e4^2), P_0(0xbb4c4e4^3), P_0(0xbb4c4e4^4)$. At the same time, the Prover can calculate the Root of this Merkletree as $MTR(P_0)$.
 2. The Prover calculates a random number $v_0$ to fold $P_0(X)$
     1. Calculate $v_0$:
         1. $v_0 = Hash(seed,MTR(P_0))$
@@ -89,7 +89,7 @@ impl TwoAdicField for BabyBear {
 - The Prover and Verifier generate a query position for the polynomial based on the same Hash Chain
     - Position $r = Hash( v_1 ,P2)$
     - The Prover provides the corresponding values $P_0(r),P_0(-r),P_1(r^2),P_1(-r^2),P2$
-    - The Prover provides the corresponding MerklePath: $MTP(P_0(r)),MTP(P_0(-r)),MTP(P_1(r^2)),MTP(P_1(-r^2))$
+    - The Prover provides the corresponding MerklePath:  $MTP(P_0(r)),MTP(P_0(-r)),MTP(P_1(r^2)),MTP(P_1(-r^2))$
     
     ```jsx
     Proof {
@@ -132,10 +132,21 @@ The composition of each Leaf Script:
 
 - reveal r bitvalue commitment ：
     - This part of the script is actually to link up with FRI to verify the correctness of polynomial folding script. In that script, we will calculate the x-coordinate r of the points to be randomly challenged. We need to use bitvalue commitment to ensure that we can pass the r value used by the verification script to this Commit Taptree.。
+    
 - equal to $r_0$ or $-r_0$:
     - Because we can't know which node we are in Taptree in Leaf Script, we also need to commit the corresponding abscissa in the form of a bitvalue commitment in the Script. This part is mainly because we use the same bit value commitment for our abscissa r, so we need to judge whether the value revealed by the preimage is equal to r_0 or -r_0, because the Prover can't reveal the preimage of -r, which would be equivocation.
+    
+      > *For any finite field $\mathbb F_p=(0,1,…,p−1)$, where the order *p* is a prime number. Then, excluding zero, the remaining elements form a multiplicative group $\mathbb F_p∗=(1,…,p−1)$, the order is *p*−1. Since *p*−1 must be even, the multiplicative factors of *p*−1 must contain several 2s, let's assume there are *λ* of them. Then $\mathbb F_p∗$ must contain a multiplicative subgroup of order 2 ^ *λ*. Suppose *n*=2 ^ *k , k* ≤ *λ*, then there must exist a multiplicative subgroup of order *n*, denoted as *H*. This multiplicative subgroup must contain a generator, denoted as *ω*, and *ω ^ N* =1. This is equivalent to taking the *N*th root of 1, known as the unit root.
+      >
+      > In the 4th root-of-unity multiplicative subgroup $\mathbb H$ in the Babybear Field we use, it is shown as follows:
+      >
+      > $\mathbb H = (1, w, w^2, w^3)$ , and $w = 0xbb4c4e4$
+      >
+      > It will satisfy certain symmetry, $w^2 = -1 = -w^0, w = - w^3$ *
+    
 - reveal $p(r_0)$ bitvalue commitment:
     - Each polynomial evaluation corresponding to different abscissas has its own independent bit value commitment.
+    
 - equal to $p(r_i):$ Promise the value of the p polynomial at the abscissa r_i, and judge whether the value of the p(r_i) bitvalue commitment revealed by preimage is equal to the promised value of p(r_i).
 
 Combine the verification program with the $p_0$ evaluation Taptree Commitment:
@@ -145,7 +156,8 @@ Combine the verification program with the $p_0$ evaluation Taptree Commitment:
 3. $p_1(r^2) == p_1(r^2)$
 
 > *In the following diagram, the execution order of each leaf node's Script is from top to bottom, where the blue rectangle represents the input, and the blue dotted line represents that if these two values are not consistent, verifier can take away the staked amount by proving equivocation.*
-> 
+>
+> We also need to note that we actually need to convert the r value calculated by the first leaf node of Polynomial Folding Verify to the corresponding multiplication subgroup $\mathbb H$.
 
 ![fri-euqal](./images/fri-equal.png)
 
@@ -154,6 +166,7 @@ Currently, the unlock condition is that the provided input can execute the Gate 
 So we will use the method of bitvm2 to change all Leaf Scripts to No Equal, and the prover only need to provide the intermediate states. The modified diagram is shown below:
 
 > *In the following diagram, the execution order of each leaf node's Script is from top to bottom, where the blue rectangle represents the input, and the green dotted line represents that if these two values are not consistent, verifier can take away the staked amount by proving equivocation.*
+>
 > 
 
 ![fri-noequal](./images/fri-noequal.png)
