@@ -27,6 +27,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 - [Super Testnet's workshop "BitVM: Bitcoin Smart Contracts With Rich State"](https://www.youtube.com/watch?v=LwH9fhY4uGA)
 - [Deep dive into the draft implementation](https://www.youtube.com/watch?v=7sRqzoZorn0)
 - [Robin Linus at BitDevs meetup at Stanford (slides only)](https://docs.google.com/presentation/d/12gHxC1bR6Nb7A5IzkRvIdw44l1zP1Tn1ea_DnTbA61Q/edit?usp=sharing)
+- [BitVM: Smarter Bitcoin Contracts at ZKProof in Berlin](https://www.youtube.com/live/VIg7BjX_lJw)
 
 ## Contributors
 The BitVM project is lead by its inventor, Robin Linus, together with Lukas George and Stillsaiko. Special thanks to Super Testnet, Carsten Munk, Hakan Karakuş, Weikeng Chen, and Steven Roose for their code contributions. We're also collaborating in research projects together with Liam Eagen, Alexei Zamyatin, as well as Matteo Maffai's group at TU Vienna, and David Tse's group at Stanford.
