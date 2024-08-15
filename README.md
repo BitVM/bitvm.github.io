@@ -12,6 +12,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 - The [initial draft implementation](https://github.com/BitVM/bitvm-js) in JavaScript
 
 ## Resources
+- [BitVM Bridge](https://bitvm.org/bitvm_bridge.pdf)
 - [BitVM 2 writeup](./bitvm2)
 - [BitVM whitepaper](bitvm.pdf)
 - [BitVM Telegram group](https://t.me/bitVM_chat)
