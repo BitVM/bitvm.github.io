@@ -41,7 +41,7 @@ Current members of the BitVM Alliance include (in alphabetical order):
 
 - [Bitlayer](https://x.com/BitlayerLabs)
 - [Citrea](https://x.com/citrea_xyz)
-- [Element](https://element.team/)
+- [Element](https://x.com/element_labs42)
 - [Fiamma](https://x.com/fiamma_labs)
 - [Strata](https://x.com/Strata_BTC)
 - [ZeroSync](https://x.com/ZeroSync_)
