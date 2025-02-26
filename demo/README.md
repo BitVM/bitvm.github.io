@@ -27,7 +27,7 @@ Developers can use the following stuff to reproduce the processes in the local e
 [Code base tag](https://github.com/BitVM/BitVM/releases/tag/v0.1.0-alpha)
 
 
-[Instrudctions](https://github.com/BitVM/BitVM/blob/main/DEMO_INSTRUCTIONS.md)
+[Instructions](https://github.com/BitVM/BitVM/blob/main/DEMO_INSTRUCTIONS.md)
 
 
 # Public Signet Transactions
