@@ -123,7 +123,7 @@ href="https://mempool.bitvmnet.org/tx/ee29855315760b5b839ad20c9ce19a1e235c54afc2
 
 ## Transaction Explanation
 
-> Following the terms in [bitvm bridge paper](https://bitvm.org/bitvm_bridge.pdf)
+> Following the terms of the [BitVM bridge paper](https://bitvm.org/bitvm_bridge.pdf)
 
 ###  Roles
 
