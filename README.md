@@ -10,7 +10,8 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 ## Implementation
 - The [official BitVM implementation](https://github.com/BitVM/BitVM) in Rust
 - [Developer Preview](./demo/)
-- 
+
+
 ## Resources
 - [BitVM Bridge](https://bitvm.org/bitvm_bridge.pdf)
 - [BitVM 2 writeup](./bitvm2)
@@ -34,7 +35,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 
 ## About BitVM Alliance
 
-The BitVM Alliance is founded by Robin Linus and Lukas George to accelerate the development and implementation of BitVM project. This strategic partnership brings together leading projects and teams dedicated to advancing BitVM development.
+The BitVM Alliance was founded by Robin Linus and Lukas George to accelerate the development and implementation of BitVM project. This strategic partnership brings together leading projects and teams dedicated to advancing BitVM development.
 
 By combining expertise and resources, the alliance aims to expedite the delivery of the first BitVM bridges while ensuring robust security and innovative solutions. The collaborative nature of the alliance enables rapid knowledge sharing, coordinated development efforts, and comprehensive peer review of critical components.
 
