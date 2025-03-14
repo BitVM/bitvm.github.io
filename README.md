@@ -55,6 +55,3 @@ BitVM is developed as free and open source software under the umbrella of the [Z
 
 ### Want to Contribute?
 - Join the [Telegram group](https://t.me/bitVM_chat)
-- Sponsor developers
-  - Bitcoin: bc1qf5g6z0py2t3t49gupeqrlewga0qz2etalu4xf9
-  - [Lightning Bitcoin](https://tippin.me/@ZeroSync_)
