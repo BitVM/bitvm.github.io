@@ -29,7 +29,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 - [Robin Linus at BitDevs meetup at Stanford (slides only)](https://docs.google.com/presentation/d/12gHxC1bR6Nb7A5IzkRvIdw44l1zP1Tn1ea_DnTbA61Q/edit?usp=sharing)
 - [BitVM: Smarter Bitcoin Contracts at ZKProof in Berlin](https://www.youtube.com/live/VIg7BjX_lJw)
 - [Introducing BitVM at MIT Bitcoin Expo 2024](https://www.youtube.com/watch?v=nhR_g9hPnqM)
-- [ETHDenver-2025-DEMO](./demo/)
+- [Developer Preview DEMO](./demo/)
 
 ## About BitVM Alliance
 
