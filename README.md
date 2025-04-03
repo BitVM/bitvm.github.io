@@ -50,7 +50,7 @@ Current members of the BitVM Alliance include (in alphabetical order):
 
 
 ## Contributors
-The BitVM project is lead by its inventor, [Robin Linus](https://robinlinus.com), together with Lukas George and Stillsaiko. Special thanks to Super Testnet, Carsten Munk, Hakan Karakuş, Weikeng Chen, and Steven Roose for their code contributions. We're also collaborating in research projects together with Liam Eagen, Alexei Zamyatin, as well as Matteo Maffai's group at TU Vienna, and David Tse's group at Stanford.
+The BitVM project is lead by its inventor, [Robin Linus](https://robinlinus.com), together with Lukas George and Stillsaiko. Special thanks to Super Testnet, Carsten Munk, Hakan Karakuş, Weikeng Chen, and Steven Roose for their code contributions. We're also collaborating in research projects together with Liam Eagen, Alexei Zamyatin, as well as Matteo Maffei's and Zeta Avarikioti's group at TU Vienna, and David Tse's group at Stanford.
 
 BitVM is developed as free and open source software under the umbrella of the [ZeroSync](https://zerosync.org) nonprofit organization. It is funded by research grants from Spiral, Starkware, OpenSats, and community contributions.
 
