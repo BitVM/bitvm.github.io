@@ -41,12 +41,12 @@ By combining expertise and resources, the alliance aims to expedite the delivery
 
 Current members of the BitVM Alliance include (in alphabetical order):
 
+- [Alpen](https://x.com/AlpenLabs)
 - [Bitlayer](https://x.com/BitlayerLabs)
 - [BoB](https://x.com/build_on_bob)
 - [Citrea](https://x.com/citrea_xyz)
 - [Element](https://x.com/element_labs42)
 - [Fiamma](https://x.com/fiamma_labs)
-- [Strata](https://x.com/Strata_BTC)
 - [ZeroSync](https://x.com/ZeroSync_)
 
 
