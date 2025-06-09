@@ -43,7 +43,7 @@ Current members of the BitVM Alliance include (in alphabetical order):
 
 - [Alpen](https://x.com/AlpenLabs)
 - [Bitlayer](https://x.com/BitlayerLabs)
-- [BoB](https://x.com/build_on_bob)
+- [BOB](https://x.com/build_on_bob)
 - [Citrea](https://x.com/citrea_xyz)
 - [Element](https://x.com/element_labs42)
 - [Fiamma](https://x.com/fiamma_labs)
