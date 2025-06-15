@@ -13,6 +13,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 
 
 ## Resources
+- [BitVM3](bitvm3.pdf)
 - [BitVM Bridge](https://bitvm.org/bitvm_bridge.pdf)
 - [BitVM 2 writeup](./bitvm2)
 - [BitVM whitepaper](bitvm.pdf)
@@ -42,6 +43,7 @@ By combining expertise and resources, the alliance aims to expedite the delivery
 Current members of the BitVM Alliance include (in alphabetical order):
 
 - [Alpen](https://x.com/AlpenLabs)
+- [Babylon](https://x.com/babylonlabs_io)
 - [Bitlayer](https://x.com/BitlayerLabs)
 - [BoB](https://x.com/build_on_bob)
 - [Citrea](https://x.com/citrea_xyz)
