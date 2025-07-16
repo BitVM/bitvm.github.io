@@ -13,7 +13,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 
 
 ## Resources
-- [BitVM3](bitvm3.pdf)
+- [BitVM3-RSA](bitvm3-rsa.pdf)
 - [BitVM Bridge](https://bitvm.org/bitvm_bridge.pdf)
 - [BitVM 2 writeup](./bitvm2)
 - [BitVM whitepaper](bitvm.pdf)
@@ -49,6 +49,7 @@ Current members of the BitVM Alliance include (in alphabetical order):
 - [Citrea](https://x.com/citrea_xyz)
 - [Element](https://x.com/element_labs42)
 - [Fiamma](https://x.com/fiamma_labs)
+- [GOAT network](https://www.goat.network)
 - [ZeroSync](https://x.com/ZeroSync_)
 
 
