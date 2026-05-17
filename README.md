@@ -13,6 +13,7 @@ BitVM is the foundational element to bridge BTC to second layers such as sidecha
 
 
 ## Resources
+- [BitVM3](https://eprint.iacr.org/2026/933)
 - [Bitvm3s](bitvm3.pdf)
 - [BitVM Bridge](https://bitvm.org/bitvm_bridge.pdf)
 - [BitVM 2 writeup](./bitvm2)
